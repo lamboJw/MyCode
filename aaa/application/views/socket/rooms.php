@@ -6,7 +6,6 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
     <link rel="stylesheet" type="text/css" href="/aaa/static/css/socket/style.css"/>
     <script src="/aaa/static/javascript/jquery-1.7.2.js"></script>
-    <script src="/aaa/static/javascript/ajaxfileupload.js"></script>
     <script src="/aaa/static/javascript/socket/node_modules/socket.io-client/dist/socket.io.js"></script>
 </head>
 <body>
@@ -29,7 +28,7 @@
     <div style="background:#3d3d3d;height: 28px; width: 100%;font-size:12px;">
         <div style="line-height: 28px;color:#fff;">
             <span style="text-align:left;margin-left:10px;">房间列表</span>
-            <span style="float:right; margin-right:10px;"><span id="showusername"><?=$username?></span> |
+            <span style="float:right; margin-right:10px;"><span id="showusername"><a href="user_index"><?=$username?></a></span> |
 			<a href="javascript:logout();" style="color:#fff;">退出</a></span>
         </div>
     </div>

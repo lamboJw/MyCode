@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>登陆</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
     <link rel="stylesheet" type="text/css" href="/aaa/static/css/socket/style.css"/>
-    <script src="/aaa/static/javascript/jquery-1.7.2.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
 <div id="loginbox">

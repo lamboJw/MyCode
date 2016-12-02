@@ -30,6 +30,22 @@ class Model_user extends CI_Model
         }
     }
 
+    public function updateUser($data,$where,$uid){
+        $this->db->update($this->table,$data,$where,1);
+        if($this->db->affected_rows()){
+            $redis = $this->conn->redis();
+            $re = json_decode($redis->get('user:'.$uid),true);
+            foreach ($re as $k=>&$v) {
+                if(isset($data[$k])){
+                    $v = $data[$k];
+                }
+            }
+            $redis->set('user:'.$uid,json_encode($re));
+            $redis->close();
+        }
+        return $this->db->affected_rows();
+    }
+
     public function addUser($username, $password)
     {
         if(empty($username) || empty($password)){
@@ -39,7 +55,7 @@ class Model_user extends CI_Model
             'username' => $username,
             'password' => md5($password),
             'create_time' => time(),
-            'headimg' => "aaa"
+            'headimg' => '/static/images/unknow_face.jpg',
         );
         $insert_id = $this->db->insert($this->table, $data);
         return $insert_id;
@@ -56,7 +72,7 @@ class Model_user extends CI_Model
             $query = $this->db->query($sql);
             $re = $query->row_array();
             if(!empty($re)){
-                $redis->set('user:'.$id,json_encode(array('id'=>$re['id'],'username'=>$re['username'])));
+                $redis->set('user:'.$id,json_encode($re));
             }
         }
         $redis->close();

@@ -1,4 +1,4 @@
- @media (max-device-width: 480px) and (orientation: portrait) {
+@media (max-device-width: 480px) and (orientation: portrait) {
   @-ms-viewport{
     width:320px;
   }
@@ -18,7 +18,7 @@ h4, h5, h6, pre, code, form, field set, legend,
 input, textarea, p, blockquote, th, td {
   margin:0;
   padding:0;
-	-webkit-appearance:none;
+  -webkit-appearance:none;
 }
 
 body {
@@ -87,7 +87,7 @@ input:password {
 
 ul {
   margin:0;
-	list-style:none;
+  list-style:none;
 }
 
 a{
@@ -144,38 +144,38 @@ body {
 .guide-mask{
   top:0;
   left:0;
-	z-index: 90;
+  z-index: 90;
 }
 .guide-mask .mask-top{
-	bottom: 44px;
-	background: rgba(0,0,0,.7);
-	z-index: 90;
+  bottom: 44px;
+  background: rgba(0,0,0,.7);
+  z-index: 90;
 }
 .guide-mask .mask-bottom{
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 44px;
-	background:rgba(255, 255, 255, 0);
-	z-index: 90;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 44px;
+  background:rgba(255, 255, 255, 0);
+  z-index: 90;
 }
 .mask-top .iknow-btn{
-	position: absolute;
-	width: 256px;
-	height: 213px;
-	bottom:0;
-	left:50%;
-	margin-left:-128px;
-	background:url('https://i.alipayobjects.com/i/ecmng/png/201404/2NcJmE3ldt.png') no-repeat;
-	background-size: 100%;
-	z-index: 91;
+  position: absolute;
+  width: 256px;
+  height: 213px;
+  bottom:0;
+  left:50%;
+  margin-left:-128px;
+  background:url('https://i.alipayobjects.com/i/ecmng/png/201404/2NcJmE3ldt.png') no-repeat;
+  background-size: 100%;
+  z-index: 91;
 }
 /*guide mask end*/
 
 /*notice begin*/
 .notice-wrap-out{
- /*min-height:41px;  */
- max-height: 56px;
+  /*min-height:41px;  */
+  max-height: 56px;
 }
 .notice-wrap{
   position:fixed;
@@ -215,15 +215,15 @@ body {
 }
 /*notice end*/
 .action button {
-	border:none;
-    display: inline;
-	border-radius:30px;
-	color:#8c8c8c;
-	height:28px;
-	width:68px;
-	text-align:center;
-	background:#fbfbfb;
-	box-shadow:0 0 1px #000,0 2px 2px #eee;
+  border:none;
+  display: inline;
+  border-radius:30px;
+  color:#8c8c8c;
+  height:28px;
+  width:68px;
+  text-align:center;
+  background:#fbfbfb;
+  box-shadow:0 0 1px #000,0 2px 2px #eee;
 }
 
 .action button:active,
@@ -355,36 +355,37 @@ section.user>div {
   vertical-align: top;
   word-break: break-all;
 }
- /*
+
+/*
 section.user>div:after,
 section.user>div:before {
-  left:100%;
-  border:solid transparent;
-  content:" ";
-  height:0;
-  width:0;
-  position:absolute;
-  pointer-events:none;
+ left:100%;
+ border:solid transparent;
+ content:" ";
+ height:0;
+ width:0;
+ position:absolute;
+ pointer-events:none;
 }
 
 section.user>div:after {
-  border-color:rgba(255, 255, 255, 0);
-  border-left-color:#e3e3e3;
-  border-width:8px;
-  top:15px;
-  margin-top:-8px;
+ border-color:rgba(255, 255, 255, 0);
+ border-left-color:#e3e3e3;
+ border-width:8px;
+ top:15px;
+ margin-top:-8px;
 }
-  */
+ */
 section.user>div:before {
-    content:"";
-    position: absolute;
-    right: -5px;
-    top: 4px;
-    width: 0;
-    height: 0;
-    border-top: solid transparent;
-    border-left: 7px solid #007aff;
-    border-bottom: 4px solid transparent;
+  content:"";
+  position: absolute;
+  right: -5px;
+  top: 4px;
+  width: 0;
+  height: 0;
+  border-top: solid transparent;
+  border-left: 7px solid #007aff;
+  border-bottom: 4px solid transparent;
 }
 
 header {
@@ -392,7 +393,7 @@ header {
   color:#4d4d4d;
 }
 .welcome em{
- color:#2982e5;
+  color:#2982e5;
 }
 .welcome {
   color:#000;
@@ -408,12 +409,12 @@ header {
 .user>span {
 
   font-weight:normal;
-	font-size:14px;
-	color:#f60;
-	 max-width: 60px;
-    height: 36px;
-	overflow: hidden;
-	float: right;
+  font-size:12px;
+  color:#f60;
+  max-width: 60px;
+  height: 60px;
+  overflow: hidden;
+  float: right;
 }
 
 .robot>span, .service>span {
@@ -422,46 +423,46 @@ header {
   font-weight:700;
 }
 .service>span{
-    max-width: 60px;
-    height: 36px;
-	/*
-    background: url("https://i.alipayobjects.com/i/ecmng/png/201404/2O35FCjByn.png");
-	color: transparent;
-	background-size: 100%;
-	*/
-	font-weight:normal;
-	font-size:14px;
-	color:#999;
-    overflow: hidden;
-    float: left;
+  max-width: 60px;
+  height: 60px;
+  /*
+  background: url("https://i.alipayobjects.com/i/ecmng/png/201404/2O35FCjByn.png");
+  color: transparent;
+  background-size: 100%;
+  */
+  font-weight:normal;
+  font-size:12px;
+  color:#999;
+  overflow: hidden;
+  float: left;
 }
 
 .service>time{
-    display: none;
+  display: none;
 }
 .top-message article{
-    color: #ff6600;
+  color: #ff6600;
 }
 .top-message article .init-temp{
-    color: #000;
+  color: #000;
 }
 .top-message article .topHeader{
-    color: #ff6600;
+  color: #ff6600;
 }
 .top-message ul{
-    padding: 0;
+  padding: 0;
 }
 .top-message ul,.top-message li{
-    list-style: none;
+  list-style: none;
 }
 .robot>span ,.top-message>span{
-    float: left;
+  float: left;
 }
 .service>time{
-    display: none;
+  display: none;
 }
 .robot>span ,.top-message>span{
-    float: left;
+  float: left;
 }
 .system {
   text-align:center;
@@ -469,18 +470,18 @@ header {
   font-size:.8em;
 }
 .system .windowimg{
-    float: left;
+  float: left;
 }
 .system .windowContent{
-    position: relative;
-    border: solid 1px #7bb2d9;
-    border-radius: 5px;
-    background-color: #c5e4fa;
-    padding: 8px;
-    margin: 0 12px 0 45px;
-    text-align: left;
-    color: #000;
-    font-size: 14px;
+  position: relative;
+  border: solid 1px #7bb2d9;
+  border-radius: 5px;
+  background-color: #c5e4fa;
+  padding: 8px;
+  margin: 0 12px 0 45px;
+  text-align: left;
+  color: #000;
+  font-size: 14px;
 }
 time {
   color:#909090;
@@ -531,24 +532,24 @@ time {
   -ms-flex:1;
   -moz-box-flex:1;
   background-color:#fff;
-   -webkit-box-flex:1;
+  -webkit-box-flex:1;
   /*height: 28px;*/
   line-height:25px;
 }
 
 .input textarea {
-	margin:0;
-	float: left;
-	padding:0 6px;
-	height:80px;
-	width:95%;
-	font-size:14px;
-	background-color: #fbfbfb;
-	border:none;
-	-webkit-border-radius:15px;
-	border-radius:15px;
-	color:#000;
-	box-shadow:0 0 1px #000;
+  margin:0;
+  float: left;
+  padding:0 6px;
+  height:80px;
+  width:95%;
+  font-size:14px;
+  background-color: #fbfbfb;
+  border:none;
+  -webkit-border-radius:15px;
+  border-radius:15px;
+  color:#000;
+  box-shadow:0 0 1px #000;
 }
 
 .input textarea[disabled] {
@@ -558,31 +559,31 @@ time {
 .input-box button {
   font-size: 15px;
   /*margin-left:11px;*/
- float: right;
+  float: right;
 }
 
 section.robot>.robot-comment {
   padding: 0;
 }
 .robot-comment .robot-comment-title{
-    padding: 8px;
+  padding: 8px;
 }
 .service-comment button, .robot-comment button {
   padding:2px 12px;
   margin:0 8px;
 }
 .robot-comment button{
-    margin: 0;
+  margin: 0;
 }
 section.service-comment>div{
-    padding: 0;
-    padding-top: 10px;
+  padding: 0;
+  padding-top: 10px;
 }
 .message .robot .btn-robot{
-    padding: 0;
+  padding: 0;
 }
 .btn-robot .btn-title{
-    padding: 8px;
+  padding: 8px;
 }
 .suggest {
   border:1px solid #afafaf;
@@ -631,22 +632,22 @@ section.service-comment>div{
 }
 
 .ui-tab-item-right {
-    float:right;
-    background: #ebebeb;
-    border: 1px solid #bababa;
-    border-radius: 0 5px 5px 0;
-    color: #999;
+  float:right;
+  background: #ebebeb;
+  border: 1px solid #bababa;
+  border-radius: 0 5px 5px 0;
+  color: #999;
 }
 .ui-tab .ui-tab-item-right:active,.ui-tab .ui-tab-item-right:visited,.ui-tab .ui-tab-item-right:link{
-    color: #999;
+  color: #999;
 }
 
 .ui-tab-item-active {
-    float: right;
-    background-color:#6a89c4;
-    background-color: #2059b0;
-    border: 1px solid #2059b0;
-    border-radius: 5px 0 0 5px;
+  float: right;
+  background-color:#6a89c4;
+  background-color: #2059b0;
+  border: 1px solid #2059b0;
+  border-radius: 5px 0 0 5px;
 }
 
 .ui-tab-item,
@@ -664,81 +665,81 @@ section.service-comment>div{
 }
 
 .windowContent input{
-    padding: 13px 10px 12px;
-    width: 100%;
-    display: block;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    background: #fff;
+  padding: 13px 10px 12px;
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
 }
 .windowContent .revaliValue{
-    margin-top: 8px;
+  margin-top: 8px;
 }
 .windowContent .error-p{
-    color: #f60;
-    margin-top: 5px;
+  color: #f60;
+  margin-top: 5px;
 }
 .windowContent .button-p{
-    margin-top: 15px;
+  margin-top: 15px;
 }
 .init-temp li a{
-    color: #2982e5;
+  color: #2982e5;
 }
 .recommend ul li,.recommend ul li a{
-    color: #2982e5;
+  color: #2982e5;
 }
 
 section.robot>.comment-btns,section.service>.comment-btns{
-    padding: 0;
+  padding: 0;
 }
 .comment-btns .comment-title{
-    padding: 8px;
+  padding: 8px;
 }
 .comment-btns section{
-    padding: 0;
-    margin-bottom: 0;
-    border-top:1px solid #7bb3db;
+  padding: 0;
+  margin-bottom: 0;
+  border-top:1px solid #7bb3db;
 }
 .btn-container{
-    padding: 0;
-    margin-bottom: 0;
-    border-top:1px solid #7bb3db;
+  padding: 0;
+  margin-bottom: 0;
+  border-top:1px solid #7bb3db;
 }
 .service-comment button{
-    padding: 2px 15px;
-    height: 30px;
-    background: none;
-    border: none;
-    border-right: 1px solid #7bb3db;
-    margin: 0;
+  padding: 2px 15px;
+  height: 30px;
+  background: none;
+  border: none;
+  border-right: 1px solid #7bb3db;
+  margin: 0;
 }
 .service-comment button:last-child{
-    border-right:none;
+  border-right:none;
 }
 .btn-no{
   border-right: 1px solid #7bb3db;
 }
 .robot-comment .isClicked{
-    color: #f60;
+  color: #f60;
 }
 .robot-comment button img{
-    margin-right: 10px;
+  margin-right: 10px;
 }
 .service-comment button span{
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    margin-right: 2px;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin-right: 2px;
 }
 .service-comment button .btn-3{
-    background: url("https://i.alipayobjects.com/e/201312/1eg8I2tUAn.png") no-repeat;
+  background: url("https://i.alipayobjects.com/e/201312/1eg8I2tUAn.png") no-repeat;
 }
 
 .service-comment button .btn-2{
-    background: url("https://i.alipayobjects.com/e/201312/1egEIXEjv3.png") no-repeat;
+  background: url("https://i.alipayobjects.com/e/201312/1egEIXEjv3.png") no-repeat;
 }
 .service-comment button .btn-1{
-    background: url("https://i.alipayobjects.com/e/201312/1egEVvyvdN.png") no-repeat;
+  background: url("https://i.alipayobjects.com/e/201312/1egEVvyvdN.png") no-repeat;
 }
 .robot-comment button{
   border: none;
@@ -754,45 +755,45 @@ button.btn-yes{
   border-radius:0 0 8px 0;
 }
 .robot-comment button:last-child{
-    border-left:  1px solid #7bb3db;
+  border-left:  1px solid #7bb3db;
 }
 .robot-comment .isClicked,.service-comment .isClicked{
-    background: #93c3e5;
+  background: #93c3e5;
 }
 button:active, button[disabled]{
-    color: #999;
+  color: #999;
 }
 
 
 .windowContent .button-p{
-    margin-top: 15px;
-    border-top: 1px solid #77b0d9;
+  margin-top: 15px;
+  border-top: 1px solid #77b0d9;
 }
 .J-confirm{
-    width: 117px;
-    height: 30px;
-    border: none;
-    background: none;
-    border-left: 1px solid #77b0d9;
+  width: 117px;
+  height: 30px;
+  border: none;
+  background: none;
+  border-left: 1px solid #77b0d9;
 }
 .J-cancel{
-    width: 124px;
-    height: 30px;
-    background: none;
-    border: none;
+  width: 124px;
+  height: 30px;
+  background: none;
+  border: none;
 }
 .button-p button[disabled]{
-    cursor: default;
-    background-color: none;
-    background-image: none;
-    border-color: none;
-    box-shadow: none;
+  cursor: default;
+  background-color: none;
+  background-image: none;
+  border-color: none;
+  box-shadow: none;
 }
 .button-p button:active,.button-p button[disabled]{
-   background-color: none;
+  background-color: none;
 }
 .btnClicked{
-    background: #93c3e5;
+  background: #93c3e5;
 }
 .user .avatar-img,.avatar-service{
   width: 34px;
@@ -800,7 +801,7 @@ button:active, button[disabled]{
   border-radius: 2px;
 }
 section article header{
-	margin-top:10px;
+  margin-top:10px;
 
 }
 section article li{
@@ -856,72 +857,72 @@ section.evaluateSec .answer{
   z-index:86;
 }
 /**layer**/
-  .layer{
-    display: none;
-    position: absolute;
-    width: 275px;
-    background: rgba(255, 255, 255, .95);
-    border-radius: 7px;
-    z-index: 120;
-  }
-  .layer .layer-hd{
-    font-size: 16px;
-    line-height: 41px;
-    text-align: center;
-  }
-  .layer .layer-ct{
-    padding:0 15px 15px 15px;
-    text-align: center;
-  }
-  .layer .layer-ct input.tel-input{
-    width: 230px;
-    height: 30px;
-    border: solid 1px #ccc;
-    border-radius:5px;
-    padding:0 4px;
-  }
-  .layer .layer-ft{
-    border-top:solid 1px #afafaf;
-    font-size: 16px;
-    line-height: 41px;
-    text-align: center;
-  }
-  .layer-ft button, .evaluateWrap button{
-    border:none;
-    background-color:#fff;
-    opacity: .95;
-    height: 44px;
-    line-height: 44px;
-    text-align: center;
-    color:#007aff;
-    width: 135px;
-    font-size: 16px;
-  }
+.layer{
+  display: none;
+  position: absolute;
+  width: 275px;
+  background: rgba(255, 255, 255, .95);
+  border-radius: 7px;
+  z-index: 120;
+}
+.layer .layer-hd{
+  font-size: 16px;
+  line-height: 41px;
+  text-align: center;
+}
+.layer .layer-ct{
+  padding:0 15px 15px 15px;
+  text-align: center;
+}
+.layer .layer-ct input.tel-input{
+  width: 230px;
+  height: 30px;
+  border: solid 1px #ccc;
+  border-radius:5px;
+  padding:0 4px;
+}
+.layer .layer-ft{
+  border-top:solid 1px #afafaf;
+  font-size: 16px;
+  line-height: 41px;
+  text-align: center;
+}
+.layer-ft button, .evaluateWrap button{
+  border:none;
+  background-color:#fff;
+  opacity: .95;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  color:#007aff;
+  width: 135px;
+  font-size: 16px;
+}
 .evaluateWrap button{
   width:85px;
   height:28px;
   line-height:24px;
 }
-  .layer .button-left, .evaluateWrap .button-cp{
-    border-radius: 0 0 0 7px;
-    border-right: solid 1px #afafaf;
-  }
-  .layer .button-right{
-    border-radius: 0 0 7px 0;
-  }
-  .layer-mask{
-    background-color: rgba(0,0,0,.6);
-    position: absolute;
-    top:0;
-    z-index: 110;
-  }
-  .layer .err-msg{
-    color:red;
-    font-size: 12px;
-    text-align: left;
-    margin-top:5px;
-    padding-left:5px;
-  }
+.layer .button-left, .evaluateWrap .button-cp{
+  border-radius: 0 0 0 7px;
+  border-right: solid 1px #afafaf;
+}
+.layer .button-right{
+  border-radius: 0 0 7px 0;
+}
+.layer-mask{
+  background-color: rgba(0,0,0,.6);
+  position: absolute;
+  top:0;
+  z-index: 110;
+}
+.layer .err-msg{
+  color:red;
+  font-size: 12px;
+  text-align: left;
+  margin-top:5px;
+  padding-left:5px;
+}
 .evaluateWrap .title{
   border-bottom:solid 1px #afafaf;
   padding-bottom:8px;
@@ -940,7 +941,7 @@ section.evaluateSec .answer{
   border-bottom: solid 1px #afafaf;
 }
 .layer .evaluate-list li:after,.other-wrap:after{
- display:block;
+  display:block;
   clear:both;
   height:0;
   content:"\0020";
@@ -988,30 +989,30 @@ section.evaluateSec .answer{
   line-height: 20px;
 }
 
- .file {
-   position: relative;
-   display: inline-block;
-   background: url("/aaa/static/images/image_btn.png");
-   border: 1px solid #99D3F5;
-   border-radius: 4px;
-   padding: 4px 18px 4px 5px;
-   overflow: hidden;
-   color: #1E88C7;
-   text-decoration: none;
-   text-indent: 0;
-   line-height: 20px;
-   height: 24px;
- }
- .file input {
-   position: absolute;
-   font-size: 100px;
-   right: 0;
-   top: 0;
-   opacity: 0;
- }
- .file:hover {
-   background: url("/aaa/static/images/image_btn.png");
-   border-color: #78C3F3;
-   color: #004974;
-   text-decoration: none;
- }
+.file {
+  position: relative;
+  display: inline-block;
+  background: url("/aaa/static/images/image_btn.png");
+  border: 1px solid #99D3F5;
+  border-radius: 4px;
+  padding: 4px 18px 4px 5px;
+  overflow: hidden;
+  color: #1E88C7;
+  text-decoration: none;
+  text-indent: 0;
+  line-height: 20px;
+  height: 24px;
+}
+.file input {
+  position: absolute;
+  font-size: 100px;
+  right: 0;
+  top: 0;
+  opacity: 0;
+}
+.file:hover {
+  background: url("/aaa/static/images/image_btn.png");
+  border-color: #78C3F3;
+  color: #004974;
+  text-decoration: none;
+}
