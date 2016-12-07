@@ -42,7 +42,7 @@ io.on('connection', function (socket) {
             if(obj.room!=null && obj.room!=''){
                 room = "room:"+obj.room;
                 if(rooms_info[room] != null){
-                    if(!rooms_info[room].hasOwnProperty('uid:'+obj.userid)){
+                    if(!rooms_info[room]['user'].hasOwnProperty('uid:'+obj.userid)){
                         var user = {};
                         user.username = obj.username;
                         user.userid = obj.userid;
@@ -124,13 +124,13 @@ io.on('connection', function (socket) {
         obj.content = obj.content.replace(new RegExp("\r|\n","g"),"<br/>");
         obj.content = obj.content.replace(new RegExp(" ","g"),"&nbsp;");
         io.to(room).emit('message', obj);
-        console.log(obj.username + '说：' + obj.content);
+        console.log('房间  '+rooms_info[room]['name'] + ':  ' + obj.username + '说：' + obj.content);
     });
 
     socket.on('image', function (obj) {
         //向所有客户端广播发布的消息
         io.to(room).emit('image', obj);
-        console.log(obj.username + '发送图片：' + obj.url);
+        console.log('房间  '+rooms_info[room]['name'] + ':  ' + obj.username + '发送图片：' + obj.url);
     });
 
 });
