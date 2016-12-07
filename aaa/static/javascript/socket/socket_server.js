@@ -93,7 +93,7 @@ io.on('connection', function (socket) {
                 }
                 delete waitting_disconnect[socket.name];
             }
-        },3000);
+        },1000);
 
     });
 
