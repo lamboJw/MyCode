@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>爬虫</title>
+    <script src="/static/javascript/jquery-1.7.2.js"></script>
+</head>
+<body>
+输入地址：<input type="text" id="url">
+<input type="button" value="开始" onclick="action()">
+</body>
+<script>
+function action(){
+    $.ajax({
+        url:"test.php/get_girls_pages",
+        type:"post",
+        data:{url:$("#url").val()},
+        dataType:"text",
+        success:function(data){
+            console.log(data);
+        }
+    });
+}
+</script>
+</html>
