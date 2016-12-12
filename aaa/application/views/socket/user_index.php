@@ -4,42 +4,20 @@
     <meta charset="UTF-8">
     <title>个人主页</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
-    <script src="/aaa/static/javascript/jquery-1.7.2.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="/aaa/static/javascript/ajaxfileupload.js"></script>
     <link rel="stylesheet" type="text/css" href="/aaa/static/css/socket/style.css"/>
-    <style>
-        .head_file {
-            position: relative;
-            display: inline-block;
-            overflow: hidden;
-            color: #1E88C7;
-            text-decoration: none;
-            text-indent: 0;
-            line-height: 20px;
-            height: 100px;
-        }
-        .head_file input {
-            position: absolute;
-            font-size: 100px;
-            right: 0;
-            top: 0;
-            opacity: 0;
-        }
-        .head_file:hover {
-            text-decoration: none;
-        }
-    </style>
 </head>
-<body>
-<div style="background:#3d3d3d;height: 28px; width: 100%;font-size:12px;">
-    <div style="line-height: 28px;color:#fff;">
-        <span style="text-align:left;margin-left:10px;">个人主页</span>
-            <span style="float:right; margin-right:10px;"><span id="showusername"><a href="user_index"><?=$username?></a></span> |
+<body background="/aaa/static/images/user_bg.jpg">
+<div class="top_bar">
+    <div class="top_bar_text">
+        <span class="text_left">个人主页</span>
+            <span class="text_right"><span id="showusername"><a href="user_index"><?=$username?></a></span> |
 			<a href="javascript:logout();" style="color:#fff;">退出</a></span>
     </div>
 </div>
 <div>
-    <div style="width:360px;margin:200px auto;text-align: center;">
+    <div class="box">
         <table>
             <tr height="100px">
                 <td style="text-align: right">头像：</td>
@@ -53,20 +31,22 @@
                 </td>
             </tr>
             <tr>
-                <td style="text-align: right">用户名：</td>
-                <td><input type="text" style="width:180px;" placeholder="请输入用户名" id="username" name="username" value="<?php echo $username;?>"/></td>
+                <td class="text">用户名：</td>
+                <td class="input"><input type="text" placeholder="请输入用户名" id="username" name="username" value="<?php echo $username;?>"/></td>
             </tr>
             <tr>
-                <td style="text-align: right">真实姓名：</td>
-                <td><input type="text" style="width: 180px;" placeholder="请输入真实姓名" id="realname" name="realname" value="<?php echo $realname?>"/></td>
+                <td class="text">真实姓名：</td>
+                <td class="input"><input type="text" placeholder="请输入真实姓名" id="realname" name="realname" value="<?php echo $realname?>"/></td>
             </tr>
             <tr>
-                <td style="text-align: right">生日：</td>
-                <td><input type="text" style="width: 180px;" placeholder="请输入生日" id="birthday" name="birthday" value="<?php echo $birthday?>"/></td>
+                <td class="text">生日：</td>
+                <td class="input"><input type="text" placeholder="请输入生日" id="birthday" name="birthday" value="<?php echo $birthday?>"/></td>
             </tr>
             <tr>
-                <td><input type="submit" style="width:50px;" value="提交" onclick="javascript:save();"/></td>
-                <td><input type="button" style="width:50px;" value="返回" onclick="window.history.back();"/></td>
+                <td colspan="2">
+                    <input type="submit" style="width:50px;" value="提交" onclick="javascript:save();"/>
+                    <input type="button" style="width:50px;" value="返回" onclick="window.history.back();"/>
+                </td>
             </tr>
         </table>
     </div>
@@ -117,6 +97,12 @@
                     alert(data.msg);
                 }
             }
+        });
+    }
+
+    function logout(){
+        $.get('logout',{},function(){
+            location.href="index";
         });
     }
 </script>

@@ -6,18 +6,18 @@
     <meta name="format-detection" content="email=no"/>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
           name="viewport">
-    <title>多人聊天室</title>
+    <title><?php echo $name ?></title>
     <link rel="stylesheet" type="text/css" href="/aaa/static/css/socket/style.css"/>
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="/aaa/static/javascript/ajaxfileupload.js"></script>
     <script src="/aaa/static/javascript/socket/node_modules/socket.io-client/dist/socket.io.js"></script>
 </head>
-<body>
-<div id="count" style="float: left;height: 100%;width: 10%;border-right-style:groove;position: fixed;">
-    <div style="background:#3d3d3d;height: 28px; width: 100%;font-size:12px;">
-        <div style="line-height: 28px;color:#fff;">
-            <span style="text-align:left;margin-left:10px;" id="onlineCount">在线人数：</span>
-            <div id="onlineUser" style="background:#EFEFF4; font-size:12px; margin-top:10px; margin-left:10px; color:#666;">
+<body background="/aaa/static/images/chat_bg.jpg">
+<div id="count">
+    <div class="top_bar">
+        <div class="top_bar_text">
+            <span id="onlineCount">在线人数：</span>
+            <div id="onlineUser">
                 <ul>
 
                 </ul>
@@ -25,11 +25,11 @@
         </div>
     </div>
 </div>
-<div id="chatbox" style="width: 90%;float: right;">
-    <div style="background:#3d3d3d;height: 28px; width: 100%;font-size:12px;">
-        <div style="line-height: 28px;color:#fff;">
-            <span style="text-align:left;margin-left:10px;" id="room_name"></span>
-            <span style="float:right; margin-right:10px;"><span id="showusername"></span> |
+<div id="chatbox">
+    <div class="top_bar">
+        <div class="top_bar_text">
+            <span id="room_name" class="text_left"></span>
+            <span class="text_right"><span id="showusername"></span> |
 			<a href="javascript:logout();" style="color:#fff;">退出</a></span>
         </div>
     </div>
@@ -44,7 +44,7 @@
 <!--                    <input type="text" maxlength="140" placeholder="请输入聊天内容，按Enter提交" id="content" name="content">-->
                 </div>
                 <div class="action">
-                    <form id="imageform" method="post" action="UploadImg" name="userfile" style="display: inline;margin-right: 10px;">
+                    <form id="imageform" method="post" action="UploadImg" name="userfile">
                         <a href="javascript:void();" class="file">
                             <input id="imgSelect" type="file" name="image" accept="image/*">
                         </a>
