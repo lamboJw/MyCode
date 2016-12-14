@@ -549,7 +549,7 @@ time {
     position: fixed;
     bottom: 0;
     padding: 8px 10px;
-    width: 85%;
+    width: 90%;
     box-shadow: 0 0 1px #000;
     height: 100px;
 }
@@ -1153,7 +1153,7 @@ section.evaluateSec .answer {
     -moz-opacity: 0.8;
     -khtml-opacity: 0.8;
     opacity: 0.8;
-    width: 150px;
+    width: 80%;
     padding-left: 20px;
 }
 
@@ -1207,7 +1207,7 @@ section.evaluateSec .answer {
 }
 
 #room_box button:hover {
-    background-color: #0000FF;
+    background-color: #0044cc;
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.50), 0 17px 50px 0 rgba(0, 0, 0, 0.30);
 }
@@ -1268,4 +1268,46 @@ table .error span {
 
 .head_file:hover {
     text-decoration: none;
+}
+
+#dialog {
+    background:url("/aaa/static/images/info_box_bg.jpg");
+    background-color:#fff;
+    border:5px solid rgba(0,0,0, 0.4);
+    height:400px;
+    left:50%;
+    margin:-200px 0 0 -200px;
+    padding:1px;
+    position:fixed !important; /* 浮动对话框 */
+    position:absolute;
+    top:50%;
+    width:400px;
+    z-index:5;
+    border-radius:5px;
+    display:none;
+}
+#dialog p {
+    margin:0 0 12px;
+    height:24px;
+    line-height:24px;
+    background:#CCCCCC;
+}
+#dialog p.close {
+    text-align:right;
+    padding-right:10px;
+}
+#dialog p.close a {
+    color:black;
+    text-decoration:none;
+}
+#fullbg {
+    background-color:black;
+    left:0;
+    opacity:0.5;
+    position:absolute;
+    top:0;
+    z-index:3;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity:0.5;
 }

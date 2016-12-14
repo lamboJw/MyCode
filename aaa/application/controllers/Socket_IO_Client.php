@@ -332,7 +332,12 @@ class Socket_IO_Client extends CI_Controller
     }
 
     public function user_index(){
-        $uid = $this->uid;
+        $ajax = trim($this->input->get("ajax",true));
+        if(isset($ajax) && $ajax){
+            $uid = intval($this->input->get('uid', true));
+        }else{
+            $uid = $this->uid;
+        }
         $info = $this->model_user->getUserInfoById($uid);
         if(!empty($info)){
             if(empty($info['headimg'])){
@@ -345,9 +350,20 @@ class Socket_IO_Client extends CI_Controller
             }else{
                 $info['birthday'] = "";
             }
-            $this->load->view("socket/user_index",$info);
+            unset($info['password']);
+            unset($info['create_time']);
+            unset($info['id']);
+            if($ajax){
+                exit(json_encode(array('code' => 200, 'msg' => 'success' ,'data'=>$info)));
+            }else{
+                $this->load->view("socket/user_index",$info);
+            }
         }else{
-            echo "<script>alert('无此用户！');window.history.back();</script>";
+            if($ajax){
+                exit(json_encode(array('code' => 300, 'msg' => '无此用户信息')));
+            }else{
+                echo "<script>alert('无此用户信息！');window.history.back();</script>";
+            }
         }
     }
 

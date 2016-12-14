@@ -67,10 +67,6 @@ io.on('connection', function (socket) {
             io.to(room).emit('login', {onlineUsers: rooms_info[room]['user'], onlineCount: rooms_info[room]['count'], user: obj, action:'login',room_name:rooms_info[room]['name']});
             write( new Date().toLocaleString() + " ------>  " +obj.username + '加入了聊天室');
         }
-        console.log(new Date().toLocaleString() + " ------>  " + "socket_ids");
-        console.log(socket_ids);
-        console.log(new Date().toLocaleString() + " ------>  " + "rooms_info");
-        console.log(rooms_info);
     });
 
     //监听用户退出

@@ -55,6 +55,32 @@
         </div>
     </div>
 </div>
+<div id="fullbg"></div>
+<div id="dialog">
+    <p class="close"><a href="javascript:void(0);" onclick="closeBg();">×</a></p>
+    <div>
+        <table style="margin: auto">
+            <tr height="100px">
+                <td class="text">头像：</td>
+                <td>
+                    <img id="headimg" src="" style="width: 100px;height: 100px;">
+                </td>
+            </tr>
+            <tr>
+                <td class="text">用户名：</td>
+                <td class="input" id="username"></td>
+            </tr>
+            <tr>
+                <td class="text">真实姓名：</td>
+                <td class="input" id="realname"></td>
+            </tr>
+            <tr>
+                <td class="text">生日：</td>
+                <td class="input" id="birthday"></td>
+            </tr>
+        </table>
+    </div>
+</div>
 <script type="text/javascript" src="/aaa/static/javascript/socket/socket_client.js"></script>
 </body>
 <script>
@@ -102,6 +128,36 @@
 
     $("#imgSelect").on("change",myupload);
 
+    function showBg(uid) {
+        $.ajax({
+            url:"user_index",
+            dataType:"json",
+            type:"get",
+            data:{ajax:true,uid:uid},
+            success:function(data){
+                if(data.code == 200){
+                    $("#headimg").attr("src",data.data.headimg);
+                    $("#username").text(data.data.username);
+                    $("#realname").text(data.data.realname);
+                    $("#birthday").text(data.data.birthday);
+                    var bh = $("#count").height();
+                    var bw = $("body").width();
+                    $("#fullbg").css({
+                        height:bh,
+                        width:bw,
+                        display:"block"
+                    });
+                    $("#dialog").show();
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
 
+    }
+    //关闭灰色 jQuery 遮罩
+    function closeBg() {
+        $("#fullbg,#dialog").hide();
+    }
 </script>
 </html>

@@ -1,17 +1,9 @@
 (function () {
 	var d = document,
-		w = window,
-		p = parseInt,
-		dd = d.documentElement,
-		db = d.body,
-		dc = d.compatMode == 'CSS1Compat',
-		dx = dc ? dd: db,
-		ec = encodeURIComponent;
-
+		w = window;
 
 	w.CHAT = {
 		msgObj:$("#message"),
-		//screenheight:w.innerHeight ? w.innerHeight : dx.clientHeight,
 		username:null,
 		userid:null,
 		socket:null,
@@ -31,7 +23,6 @@
 			this.room = room;
 			this.room_name = name;
 		},
-		//退出，本例只是一个简单的刷新
 		logout:function(){
 			this.socket.emit('disconnect');
 			location.href="index";
@@ -135,17 +126,12 @@
 			this.init();
 		},
 		init:function(){
-			/*
-			 客户端根据时间和随机数生成uid,这样使得聊天室用户名称可以重复。
-			 实际项目中，如果是需要用户登录，那么直接采用用户的uid来做标识就可以
-			 */
 
 			$("#showusername").html("<a href='user_index'>"+this.username+"</a>");
-			//this.msgObj.style.minHeight = (this.screenheight - db.clientHeight + this.msgObj.clientHeight) + "px";
 			this.scrollToBottom();
 
 			//连接websocket后端服务器
-			this.socket = io.connect('ws://lambojw.3w.dkys.org:3000');
+			this.socket = io.connect('ws://localhost:3000');
 
 			//告诉服务器端有用户登录
 			this.socket.emit('login', {userid:this.userid, username:this.username ,room:this.room,room_name:this.room_name,headimg:this.headimg});
@@ -177,7 +163,7 @@
 			this.socket.on('message', function(obj){
 				var isme = (obj.userid == CHAT.userid) ? true : false;
 				var contentDiv = '<div>'+obj.content+'</div>';
-				var headimg = '<img	src="'+obj.headimg+'" class="headimg" style="width:30px;height:30px;">';
+				var headimg = '<a href="javascript:showBg('+obj.userid+');"><img	src="'+obj.headimg+'" class="headimg" style="width:30px;height:30px;"></a>';
 				var usernameDiv = '<span>'+headimg+'<br/>'+obj.username+'</span>';
 				if(isme){
 					var className = 'user';
@@ -192,7 +178,7 @@
 			this.socket.on('image', function(obj){
 				var isme = (obj.userid == CHAT.userid) ? true : false;
 				var contentDiv = '<div><img	src="'+obj.thumb_url+'"></div>';
-				var headimg = '<img	src="'+obj.headimg+'" class="headimg" style="width:30px;height:30px;">';
+				var headimg = '<a href="javascript:showBg('+obj.userid+');"><img	src="'+obj.headimg+'" class="headimg" style="width:30px;height:30px;"></a>';
 				var usernameDiv = '<span>'+headimg+'<br/>'+obj.username+'</span>';
 				if(isme){
 					var className = 'user';
@@ -208,7 +194,7 @@
 			});
 		}
 	};
-	//通过“回车”提交信息
+	//通过“Ctrl+回车”提交信息
 	$(document).keydown(function(e) {
 		e = e || event;
 		if (e.ctrlKey && e.which == 13) {
